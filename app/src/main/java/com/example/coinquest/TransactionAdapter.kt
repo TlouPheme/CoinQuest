@@ -17,11 +17,13 @@ import java.util.*
  */
 class TransactionAdapter(private var transactions: List<Transaction>) :
     RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>() {
+    // (Gemini, 2026)
 
     /**
      * ViewHolder holds references to the UI elements for a single list item.
      */
     class TransactionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        // (Gemini, 2026)
         val ivTypeIcon: ImageView = view.findViewById(R.id.ivTypeIcon)
         val tvTitle: TextView = view.findViewById(R.id.tvTitle)
         val tvCategoryDate: TextView = view.findViewById(R.id.tvCategoryDate)

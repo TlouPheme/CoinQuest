@@ -47,6 +47,7 @@ class CategorySummaryActivity : AppCompatActivity() {
         val tvPeriod = findViewById<TextView>(R.id.tvPeriod)
         val rvExpenses = findViewById<RecyclerView>(R.id.rvExpensesSummary)
         val rvIncome = findViewById<RecyclerView>(R.id.rvIncomeSummary)
+        // (Gemini, 2026)
 
         btnBack.setOnClickListener { finish() }
 
@@ -54,11 +55,13 @@ class CategorySummaryActivity : AppCompatActivity() {
         rvExpenses.layoutManager = LinearLayoutManager(this)
         expenseAdapter = CategorySummaryAdapter(emptyList())
         rvExpenses.adapter = expenseAdapter
+        // (Gemini, 2026)
 
         // Setup Income RecyclerView
         rvIncome.layoutManager = LinearLayoutManager(this)
         incomeAdapter = CategorySummaryAdapter(emptyList())
         rvIncome.adapter = incomeAdapter
+        // (Gemini, 2026)
 
         val database = AppDatabase.getDatabase(this)
 

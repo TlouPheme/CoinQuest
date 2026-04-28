@@ -35,6 +35,7 @@ class TransactionListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_transaction_list)
 
         val rvTransactions = findViewById<RecyclerView>(R.id.rvTransactions)
+        // (Gemini, 2026)
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
         val btnFilter = findViewById<View>(R.id.btnFilterPeriod)
         val tvPeriod = findViewById<TextView>(R.id.tvPeriod)
@@ -44,6 +45,7 @@ class TransactionListActivity : AppCompatActivity() {
         rvTransactions.layoutManager = LinearLayoutManager(this)
         adapter = TransactionAdapter(emptyList())
         rvTransactions.adapter = adapter
+        // (Gemini, 2026)
 
         btnBack.setOnClickListener { finish() }
 

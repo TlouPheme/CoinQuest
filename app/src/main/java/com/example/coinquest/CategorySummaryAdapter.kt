@@ -10,8 +10,10 @@ import java.util.*
 
 class CategorySummaryAdapter(private var totals: List<CategoryTotal>) :
     RecyclerView.Adapter<CategorySummaryAdapter.ViewHolder>() {
+    // (Gemini, 2026)
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        // (Gemini, 2026)
         val tvName: TextView = view.findViewById(R.id.tvCategoryName)
         val tvAmount: TextView = view.findViewById(R.id.tvCategoryAmount)
     }

@@ -13,6 +13,10 @@ CoinQuest is a modern Android application designed to help users track their fin
 - **Local Storage**: All data is stored securely on-device using a Room database, ensuring privacy and offline availability.
 - **Category Normalization**: Automatic cleaning of category inputs to ensure consistent reporting.
 
+## Demonstration Video
+
+[Demonstration video](https://youtu.be/ySATya4D9BE)
+
 ## Tech Stack
 
 - **Language**: Kotlin
@@ -48,6 +52,11 @@ The app uses three main tables:
 1. `transactions`: Stores individual financial records.
 2. `users`: Stores user credentials for local authentication.
 3. `goals`: Stores financial targets and limits.
+
+## References
+
+1. Anonymous Knowledge (2025). Learn Kotlin for Android App Development. YouTube. Available at: https://youtube.com/playlist?list=PLQ_Ai1O7sMV0LRCZJaHpl_9WLQunMqrzG&si=aMQ6yZKCbHcOAdK0 [Accessed 28 Apr. 2026].
+2. Gemini (2026). RecyclerView. [online] Gemini. Available at: https://gemini.google.com/app [Accessed 28 Apr. 2026].
 
 ## License
 
