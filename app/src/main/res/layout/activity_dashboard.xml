@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0A1F44"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dashboard"
+        android:textColor="#FFD700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/tvIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total_income_r0_00"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/total_expenses_r0_00"
+        android:textColor="#EF5350"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvIncomeGoalStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvExpenseGoalStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/scoreBadge"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        app:cardCornerRadius="80dp"
+        app:cardBackgroundColor="#1A2E5A"
+        app:strokeColor="#FFD700"
+        app:strokeWidth="4dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/health"
+                android:textColor="#FFD700"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:text="@string/default_score"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score"
+                android:textColor="#FFD700"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btnCategorySummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/category_summary"
+        android:backgroundTint="#1A2E5A"
+        android:textColor="#FFD700"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnViewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_history"
+        android:backgroundTint="#1A2E5A"
+        android:textColor="#FFD700"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnSetGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set_goals"
+        android:backgroundTint="#1A2E5A"
+        android:textColor="#FFD700"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnAddTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_transaction"
+        android:backgroundTint="#FFD700"
+        android:textColor="#0A1F44"
+        android:textStyle="bold"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

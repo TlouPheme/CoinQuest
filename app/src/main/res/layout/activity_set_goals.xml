@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0A1F44"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back"
+            android:layout_centerVertical="true"
+            app:tint="#FFD700" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/financial_goals"
+            android:textColor="#FFD700"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/min_income_goal"
+        android:textColor="#FFD700"
+        android:alpha="0.9"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etMinIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_min_income"
+        android:inputType="numberDecimal"
+        android:textColor="#FFD700"
+        android:textColorHint="#888888"
+        android:backgroundTint="#FFD700"
+        android:layout_marginBottom="24dp"
+        android:autofillHints="none"
+        android:minHeight="48dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/max_expense_goal"
+        android:textColor="#FFD700"
+        android:alpha="0.9"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etMaxExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_max_expense"
+        android:inputType="numberDecimal"
+        android:textColor="#FFD700"
+        android:textColorHint="#888888"
+        android:backgroundTint="#FFD700"
+        android:layout_marginBottom="32dp"
+        android:autofillHints="none"
+        android:minHeight="48dp"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnSaveGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_goals"
+        android:backgroundTint="#FFD700"
+        android:textColor="#0A1F44"
+        android:textStyle="bold"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

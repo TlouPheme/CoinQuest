@@ -1,0 +1,141 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A1F44"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                android:contentDescription="@string/back"
+                android:layout_centerVertical="true"
+                app:tint="#FFD700" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_transaction"
+                android:textColor="#FFD700"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="name"
+            android:backgroundTint="#FFD700"
+            android:hint="@string/title_e_g_grocery"
+            android:inputType="textCapSentences"
+            android:minHeight="48dp"
+            android:textColor="#FFD700"
+            android:textColorHint="#888888"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
+            android:backgroundTint="#FFD700"
+            android:hint="@string/amount"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textColor="#FFD700"
+            android:textColorHint="#888888"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="none"
+            android:backgroundTint="#FFD700"
+            android:hint="@string/category_e_g_food"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="#FFD700"
+            android:textColorHint="#888888"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/rgType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expense"
+                android:textColor="#FFD700"
+                android:checked="true"
+                android:buttonTint="#FFD700"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/rbIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/income"
+                android:textColor="#FFD700"
+                android:buttonTint="#FFD700"
+                android:layout_marginStart="24dp"
+                android:textStyle="bold"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnPickImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_image"
+            android:backgroundTint="#1A2E5A"
+            android:textColor="#FFD700"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_marginBottom="12dp"/>
+
+        <ImageView
+            android:id="@+id/ivTransactionImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:contentDescription="@string/transaction_image" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_transaction"
+            android:backgroundTint="#FFD700"
+            android:textColor="#0A1F44"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+</ScrollView>
