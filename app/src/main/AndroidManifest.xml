@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoinQuest">
         <activity
+            android:name=".AnalyticsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GamificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SavingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".CategorySummaryActivity"
             android:exported="false" />
         <activity

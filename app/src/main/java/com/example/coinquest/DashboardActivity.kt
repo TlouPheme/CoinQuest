@@ -30,10 +30,24 @@ class DashboardActivity : AppCompatActivity() {
         val btnSetGoals = findViewById<Button>(R.id.btnSetGoals)
         val btnViewHistory = findViewById<Button>(R.id.btnViewHistory)
         val btnCategorySummary = findViewById<Button>(R.id.btnCategorySummary)
+        val btnAnalytics = findViewById<Button>(R.id.btnAnalytics)
+        val btnGamification = findViewById<Button>(R.id.btnGamification)
+        val btnSavings = findViewById<Button>(R.id.btnSavings)
 
         val database = AppDatabase.getDatabase(this)
 
         // Navigation setup
+        btnAnalytics.setOnClickListener {
+            startActivity(Intent(this, AnalyticsActivity::class.java))
+        }
+
+        btnGamification.setOnClickListener {
+            startActivity(Intent(this, GamificationActivity::class.java))
+        }
+
+        btnSavings.setOnClickListener {
+            startActivity(Intent(this, SavingsActivity::class.java))
+        }
         btnAdd.setOnClickListener {
             startActivity(Intent(this, AddTransactionActivity::class.java))
         }
@@ -89,19 +103,9 @@ class DashboardActivity : AppCompatActivity() {
                 }
                 
                 // Calculate and display financial health percentage
-                val score = calculateFinancialHealth(income, expenses)
+                val score = FinanceUtils.calculateFinancialHealth(income, expenses)
                 tvScore.text = "$score%"
             }
         }
-    }
-
-    /**
-     * Logic to determine financial health based on savings ratio.
-     * @return Percentage of income saved, clamped between 0 and 100.
-     */
-    private fun calculateFinancialHealth(income: Double, expenses: Double): Int {
-        if (income == 0.0) return 0
-        val savings = income - expenses
-        return ((savings / income) * 100).toInt().coerceIn(0, 100)
     }
 }

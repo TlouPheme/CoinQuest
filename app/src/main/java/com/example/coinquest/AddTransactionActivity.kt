@@ -83,6 +83,7 @@ class AddTransactionActivity : AppCompatActivity() {
                 // Async database insertion using Coroutines
                 lifecycleScope.launch {
                     database.transactionDao().insert(transaction)
+                    GamificationManager(this@AddTransactionActivity).addTransactionPoints()
                     Toast.makeText(this@AddTransactionActivity, "Transaction Saved", Toast.LENGTH_SHORT).show()
                     finish() // Return to the previous screen (usually Dashboard)
                 }

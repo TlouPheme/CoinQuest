@@ -98,6 +98,46 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnAnalytics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Analytics"
+            android:backgroundTint="#1A2E5A"
+            android:textColor="#FFD700"
+            android:layout_marginEnd="4dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btnGamification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rewards"
+            android:backgroundTint="#1A2E5A"
+            android:textColor="#FFD700"
+            android:layout_marginStart="4dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSavings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Savings Goals"
+        android:backgroundTint="#1A2E5A"
+        android:textColor="#FFD700"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"/>
+
     <Button
         android:id="@+id/btnCategorySummary"
         android:layout_width="match_parent"

@@ -9,7 +9,11 @@ import androidx.room.RoomDatabase
  * The main Room database for the application.
  * Defines entities and provides access to DAOs.
  */
-@Database(entities = [Transaction::class, User::class, Goal::class], version = 4, exportSchema = false)
+@Database(
+    entities = [Transaction::class, User::class, Goal::class, UserProgress::class, Badge::class, SavingsGoal::class],
+    version = 5,
+    exportSchema = false
+)
 abstract class AppDatabase : RoomDatabase() {
     
     /** Accessor for Transaction-related database operations. */
@@ -20,6 +24,12 @@ abstract class AppDatabase : RoomDatabase() {
     
     /** Accessor for Goal-related database operations (Income/Expense targets). */
     abstract fun goalDao(): GoalDao
+
+    /** Accessor for Gamification/Achievement operations. */
+    abstract fun achievementDao(): AchievementDao
+
+    /** Accessor for Savings Goal operations. */
+    abstract fun savingsGoalDao(): SavingsGoalDao
 
     companion object {
         @Volatile

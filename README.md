@@ -1,63 +1,53 @@
-# CoinQuest
+# CoinQuest - Smart Budget Tracker
 
-CoinQuest is a modern Android application designed to help users track their finances, set goals, and gain insights into their spending habits. Built with Kotlin and the latest Android development practices, it provides a secure and intuitive way to manage personal finances locally.
+CoinQuest is a comprehensive Android application designed to help users take control of their finances through intuitive tracking, insightful analytics, and engaging gamification.
 
-## Features
+## 🚀 Features
 
-- **Transaction Tracking**: Easily record income and expenses with titles, amounts, and categories.
-- **Category Summary**: View aggregated totals by category for both income and expenses.
-- **Period Filtering**: Filter transactions and summaries by custom date ranges using a Material Date Range Picker.
-- **Financial Goals**: Set monthly minimum income goals and maximum expense limits with visual status indicators.
-- **Financial Health Score**: Get a quick overview of your financial health based on your savings ratio.
-- **Image Attachments**: Attach photos of receipts or relevant images to your transactions.
-- **Local Storage**: All data is stored securely on-device using a Room database, ensuring privacy and offline availability.
-- **Category Normalization**: Automatic cleaning of category inputs to ensure consistent reporting.
+### 1. Spending Analytics Graph
+*   Visualizes spending per category using dynamic Bar Charts.
+*   Includes **Minimum and Maximum spending goals** directly on the graph for quick comparison.
+*   Filter spending by custom date ranges.
 
-## Demonstration Video
+### 2. Budget Progress Dashboard
+*   Real-time monitoring of financial health.
+*   Visual indicators for overspending and underspending.
+*   Percentage-based financial health score.
 
-[Demonstration video](https://youtu.be/ySATya4D9BE)
+### 3. Gamification & Achievements
+*   **XP & Leveling System:** Earn experience points for every transaction logged.
+*   **Badges:** Unlock achievements like "Weekly Warrior" for consistency.
+*   **Reward Tiers:** Progress from Beginner to Budget Master.
 
-## Tech Stack
+### 4. Custom Features
+*   **Savings Goal Tracker:** Set specific targets for future purchases or emergency funds and track your progress.
+*   **Smart Spending Insights:** AI-driven suggestions based on your spending habits to help you save more.
 
-- **Language**: Kotlin
-- **Architecture**: MVVM (Model-View-ViewModel) pattern with Coroutines and Flow for reactive data handling.
-- **Database**: Room Persistence Library for local data management.
-- **UI Components**: Material Design 3, RecyclerView, ConstraintLayout.
-- **Asynchronous Programming**: Kotlin Coroutines and Lifecycle-aware components.
-- **Image Handling**: Modern Activity Result API for gallery access.
+### 5. Core Functionality
+*   User Registration & Secure Login.
+*   Detailed Expense & Income logging with receipt photo uploads.
+*   RoomDB for local, persistent storage.
 
-## Getting Started
+## 🛠 Architecture & Technologies
+*   **Language:** Kotlin
+*   **Database:** Room (SQLite)
+*   **UI:** Material Design 3 (XML)
+*   **Pattern:** MVVM (Model-View-ViewModel)
+*   **Charts:** MPAndroidChart
+*   **Asynchronous:** Kotlin Coroutines & Flow
 
-### Prerequisites
+## 🛠 Setup Instructions
+1. Clone the repository: `git clone https://github.com/yourusername/CoinQuest.git`
+2. Open the project in **Android Studio (Ladybug or newer)**.
+3. Sync Project with Gradle Files.
+4. Run the app on an emulator or physical device (Min SDK 24).
 
-- Android Studio Ladybug (or newer)
-- Android SDK 24+ (Android 7.0 Nougat)
+## 🧪 Testing & CI/CD
+*   **Unit Tests:** Business logic validated using JUnit.
+*   **CI/CD:** Automated builds and tests via **GitHub Actions** on every push.
 
-### Installation
+## 📺 Demonstration
+[Link to Video Demonstration]
 
-1. Clone the repository to your local machine.
-2. Open the project in Android Studio.
-3. Sync the project with Gradle files.
-4. Run the app on an emulator or a physical device.
-
-## Project Structure
-
-- `com.example.coinquest.data`: Contains database entities (Transaction, User, Goal), DAOs, and the AppDatabase configuration.
-- `com.example.coinquest`: Contains Activities (UI) and Adapters for managing lists.
-- `res/layout`: XML layout files for all screens and list items.
-
-## Database Schema
-
-The app uses three main tables:
-1. `transactions`: Stores individual financial records.
-2. `users`: Stores user credentials for local authentication.
-3. `goals`: Stores financial targets and limits.
-
-## References
-
-1. Anonymous Knowledge (2025). Learn Kotlin for Android App Development. YouTube. Available at: https://youtube.com/playlist?list=PLQ_Ai1O7sMV0LRCZJaHpl_9WLQunMqrzG&si=aMQ6yZKCbHcOAdK0 [Accessed 28 Apr. 2026].
-2. Gemini (2026). RecyclerView. [online] Gemini. Available at: https://gemini.google.com/app [Accessed 28 Apr. 2026].
-
-## License
-
-This project is for educational purposes. All rights reserved.
+---
+Developed as a Final POE Project for Android Development.
