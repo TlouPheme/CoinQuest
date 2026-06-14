@@ -10,9 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spending Analytics"
-        android:textColor="#FFD700"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        style="@style/TextAppearance.CoinQuest.Headline"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"/>
 

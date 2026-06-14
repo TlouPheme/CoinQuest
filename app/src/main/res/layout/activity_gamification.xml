@@ -15,9 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Achievements"
-            android:textColor="#FFD700"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            style="@style/TextAppearance.CoinQuest.Headline"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"/>
 
@@ -39,9 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Level 1"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    style="@style/TextAppearance.CoinQuest.Title"/>
 
                 <ProgressBar
                     android:id="@+id/pbXp"
@@ -65,8 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your Badges"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
+            style="@style/TextAppearance.CoinQuest.Title"
             android:layout_marginBottom="8dp"/>
 
         <androidx.recyclerview.widget.RecyclerView

@@ -11,9 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dashboard"
-        android:textColor="#FFD700"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        style="@style/TextAppearance.CoinQuest.Headline"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"/>
 
@@ -23,7 +21,9 @@
         android:layout_height="wrap_content"
         android:text="@string/total_income_r0_00"
         android:textColor="#4CAF50"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        android:gravity="center"
         android:layout_marginBottom="8dp"/>
 
     <TextView
@@ -33,22 +33,26 @@
         android:layout_marginBottom="8dp"
         android:text="@string/total_expenses_r0_00"
         android:textColor="#EF5350"
-        android:textSize="18sp" />
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/tvIncomeGoalStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
+        style="@style/TextAppearance.CoinQuest.Body"
+        android:textSize="@dimen/text_size_label"
+        android:gravity="center"
         android:layout_marginBottom="4dp"/>
 
     <TextView
         android:id="@+id/tvExpenseGoalStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
+        style="@style/TextAppearance.CoinQuest.Body"
+        android:textSize="@dimen/text_size_label"
+        android:gravity="center"
         android:layout_marginBottom="16dp"/>
 
     <com.google.android.material.card.MaterialCardView
