@@ -1,207 +1,209 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:fillViewport="true"
     android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard"
-        style="@style/TextAppearance.CoinQuest.Headline"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp"/>
-
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:cardBackgroundColor="#1A2E5A"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="16dp">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <LinearLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard"
+            style="@style/TextAppearance.CoinQuest.Headline"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#1A2E5A"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="16dp">
 
-            <TextView
-                android:id="@+id/tvIncome"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/total_income_r0_00"
-                android:textColor="#4CAF50"
-                android:textSize="@dimen/text_size_title"
-                android:textStyle="bold"
-                android:gravity="center" />
+                android:orientation="vertical"
+                android:padding="16dp">
 
-            <TextView
-                android:id="@+id/tvExpenses"
+                <TextView
+                    android:id="@+id/tvIncome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_income_r0_00"
+                    android:textColor="#4CAF50"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_expenses_r0_00"
+                    android:textColor="#EF5350"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#33FFFFFF"
+                    android:layout_marginVertical="12dp" />
+
+                <TextView
+                    android:id="@+id/tvIncomeGoalStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.CoinQuest.Body"
+                    android:textSize="@dimen/text_size_label"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvExpenseGoalStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.CoinQuest.Body"
+                    android:textSize="@dimen/text_size_label"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/scoreBadge"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="80dp"
+            app:cardBackgroundColor="#1A2E5A"
+            app:strokeColor="#FFD700"
+            app:strokeWidth="4dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/total_expenses_r0_00"
-                android:textColor="#EF5350"
-                android:textSize="@dimen/text_size_title"
-                android:textStyle="bold"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:layout_marginTop="8dp" />
+                android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#33FFFFFF"
-                android:layout_marginVertical="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health"
+                    android:textColor="#FFD700"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
 
-            <TextView
-                android:id="@+id/tvIncomeGoalStatus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.CoinQuest.Body"
-                android:textSize="@dimen/text_size_label"
-                android:gravity="center" />
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:text="@string/default_score"/>
 
-            <TextView
-                android:id="@+id/tvExpenseGoalStatus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.CoinQuest.Body"
-                android:textSize="@dimen/text_size_label"
-                android:gravity="center"
-                android:layout_marginTop="4dp" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score"
+                    android:textColor="#FFD700"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/scoreBadge"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
-        app:cardCornerRadius="80dp"
-        app:cardBackgroundColor="#1A2E5A"
-        app:strokeColor="#FFD700"
-        app:strokeWidth="4dp"
-        app:cardElevation="8dp">
-
-        <LinearLayout
+        <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            app:columnCount="2"
+            app:alignmentMode="alignMargins"
+            android:layout_marginBottom="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnAnalytics"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/health"
-                android:textColor="#FFD700"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:letterSpacing="0.1" />
+                app:layout_columnWeight="1"
+                android:text="Analytics"
+                android:backgroundTint="@color/gold"
+                android:textColor="@color/navy"
+                android:layout_margin="4dp"/>
 
-            <TextView
-                android:id="@+id/tvScore"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnGamification"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:text="@string/default_score"/>
+                app:layout_columnWeight="1"
+                android:text="Rewards"
+                android:backgroundTint="@color/gold"
+                android:textColor="@color/navy"
+                android:layout_margin="4dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnSavings"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/score"
-                android:textColor="#FFD700"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+                app:layout_columnWeight="1"
+                android:text="Savings"
+                android:backgroundTint="@color/gold"
+                android:textColor="@color/navy"
+                android:layout_margin="4dp"/>
 
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:columnCount="2"
-        app:alignmentMode="alignMargins"
-        android:layout_marginBottom="16dp">
+            <Button
+                android:id="@+id/btnCategorySummary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                android:text="Summary"
+                android:backgroundTint="@color/gold"
+                android:textColor="@color/navy"
+                android:layout_margin="4dp"/>
 
-        <Button
-            android:id="@+id/btnAnalytics"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            android:text="Analytics"
-            android:backgroundTint="@color/gold"
-            android:textColor="@color/navy"
-            android:layout_margin="4dp"/>
+            <Button
+                android:id="@+id/btnViewHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                android:text="History"
+                android:backgroundTint="@color/gold"
+                android:textColor="@color/navy"
+                android:layout_margin="4dp"/>
 
-        <Button
-            android:id="@+id/btnGamification"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            android:text="Rewards"
-            android:backgroundTint="@color/gold"
-            android:textColor="@color/navy"
-            android:layout_margin="4dp"/>
+            <Button
+                android:id="@+id/btnSetGoals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                android:text="Goals"
+                android:backgroundTint="@color/gold"
+                android:textColor="@color/navy"
+                android:layout_margin="4dp"/>
 
-        <Button
-            android:id="@+id/btnSavings"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            android:text="Savings"
-            android:backgroundTint="@color/gold"
-            android:textColor="@color/navy"
-            android:layout_margin="4dp"/>
+        </androidx.gridlayout.widget.GridLayout>
 
         <Button
-            android:id="@+id/btnCategorySummary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            android:text="Summary"
-            android:backgroundTint="@color/gold"
-            android:textColor="@color/navy"
-            android:layout_margin="4dp"/>
+            android:id="@+id/btnAddTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="@string/add_new_transaction"
+            android:textSize="18sp"
+            app:cornerRadius="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
 
-        <Button
-            android:id="@+id/btnViewHistory"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            android:text="History"
-            android:backgroundTint="@color/gold"
-            android:textColor="@color/navy"
-            android:layout_margin="4dp"/>
-
-        <Button
-            android:id="@+id/btnSetGoals"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            android:text="Goals"
-            android:backgroundTint="@color/gold"
-            android:textColor="@color/navy"
-            android:layout_margin="4dp"/>
-
-    </androidx.gridlayout.widget.GridLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <Button
-        android:id="@+id/btnAddTransaction"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:text="@string/add_new_transaction"
-        android:textSize="18sp"
-        app:cornerRadius="16dp"
-        android:layout_marginBottom="8dp"/>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
