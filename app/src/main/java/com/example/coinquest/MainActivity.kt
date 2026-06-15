@@ -2,8 +2,7 @@ package com.example.coinquest
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -12,10 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        findViewById<Button>(R.id.btnStart).setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
-        }, 3000)
-        // (Anonymous Knowledge, 2026)
+        }
     }
 }

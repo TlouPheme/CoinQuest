@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
     implementation(libs.mpandroidchart)
+    implementation(libs.androidx.gridlayout)
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)

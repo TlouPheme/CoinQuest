@@ -4,11 +4,29 @@
         <item name="colorPrimary">@color/gold</item>
         <item name="colorOnPrimary">@color/navy</item>
         <item name="android:statusBarColor">@color/navy</item>
+        <item name="android:windowBackground">@drawable/bg_main_gradient</item>
 
         <!-- Default Text Appearances -->
         <item name="textAppearanceHeadlineLarge">@style/TextAppearance.CoinQuest.Headline</item>
         <item name="textAppearanceTitleLarge">@style/TextAppearance.CoinQuest.Title</item>
         <item name="textAppearanceBodyLarge">@style/TextAppearance.CoinQuest.Body</item>
+
+        <!-- Button Styles -->
+        <item name="materialButtonStyle">@style/Widget.CoinQuest.Button</item>
+    </style>
+
+    <!-- Custom Button Styles -->
+    <style name="Widget.CoinQuest.Button" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.CoinQuest.Button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="ShapeAppearance.CoinQuest.Button" parent="">
+        <item name="cornerSize">12dp</item>
     </style>
 
     <!-- Headline Style: Consistent Bold Gold Titles -->

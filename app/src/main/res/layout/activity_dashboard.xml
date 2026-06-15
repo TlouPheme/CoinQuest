@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#0A1F44"
     android:fitsSystemWindows="true">
 
     <TextView
@@ -13,47 +12,67 @@
         android:text="@string/dashboard"
         style="@style/TextAppearance.CoinQuest.Headline"
         android:layout_gravity="center"
-        android:layout_marginBottom="24dp"/>
-
-    <TextView
-        android:id="@+id/tvIncome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/total_income_r0_00"
-        android:textColor="#4CAF50"
-        android:textSize="@dimen/text_size_title"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="8dp"/>
-
-    <TextView
-        android:id="@+id/tvExpenses"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/total_expenses_r0_00"
-        android:textColor="#EF5350"
-        android:textSize="@dimen/text_size_title"
-        android:textStyle="bold"
-        android:gravity="center" />
-
-    <TextView
-        android:id="@+id/tvIncomeGoalStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.CoinQuest.Body"
-        android:textSize="@dimen/text_size_label"
-        android:gravity="center"
-        android:layout_marginBottom="4dp"/>
-
-    <TextView
-        android:id="@+id/tvExpenseGoalStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.CoinQuest.Body"
-        android:textSize="@dimen/text_size_label"
-        android:gravity="center"
         android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#1A2E5A"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_income_r0_00"
+                android:textColor="#4CAF50"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_expenses_r0_00"
+                android:textColor="#EF5350"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#33FFFFFF"
+                android:layout_marginVertical="12dp" />
+
+            <TextView
+                android:id="@+id/tvIncomeGoalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.CoinQuest.Body"
+                android:textSize="@dimen/text_size_label"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvExpenseGoalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.CoinQuest.Body"
+                android:textSize="@dimen/text_size_label"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/scoreBadge"
@@ -102,87 +121,81 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <LinearLayout
+    <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="12dp">
+        app:columnCount="2"
+        app:alignmentMode="alignMargins"
+        android:layout_marginBottom="16dp">
 
         <Button
             android:id="@+id/btnAnalytics"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            app:layout_columnWeight="1"
             android:text="Analytics"
-            android:backgroundTint="#1A2E5A"
-            android:textColor="#FFD700"
-            android:layout_marginEnd="4dp"
-            android:textAllCaps="false"/>
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_margin="4dp"/>
 
         <Button
             android:id="@+id/btnGamification"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            app:layout_columnWeight="1"
             android:text="Rewards"
-            android:backgroundTint="#1A2E5A"
-            android:textColor="#FFD700"
-            android:layout_marginStart="4dp"
-            android:textAllCaps="false"/>
-    </LinearLayout>
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_margin="4dp"/>
 
-    <Button
-        android:id="@+id/btnSavings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Savings Goals"
-        android:backgroundTint="#1A2E5A"
-        android:textColor="#FFD700"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:layout_marginBottom="12dp"/>
+        <Button
+            android:id="@+id/btnSavings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            android:text="Savings"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_margin="4dp"/>
 
-    <Button
-        android:id="@+id/btnCategorySummary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/category_summary"
-        android:backgroundTint="#1A2E5A"
-        android:textColor="#FFD700"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:layout_marginBottom="12dp"/>
+        <Button
+            android:id="@+id/btnCategorySummary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            android:text="Summary"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_margin="4dp"/>
 
-    <Button
-        android:id="@+id/btnViewHistory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/view_history"
-        android:backgroundTint="#1A2E5A"
-        android:textColor="#FFD700"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:layout_marginBottom="12dp"/>
+        <Button
+            android:id="@+id/btnViewHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            android:text="History"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_margin="4dp"/>
 
-     <Button
-        android:id="@+id/btnSetGoals"
+        <Button
+            android:id="@+id/btnSetGoals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            android:text="Goals"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_margin="4dp"/>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/set_goals"
-        android:backgroundTint="#1A2E5A"
-        android:textColor="#FFD700"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:layout_marginBottom="12dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/btnAddTransaction"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:text="@string/add_new_transaction"
-        android:backgroundTint="#FFD700"
-        android:textColor="#0A1F44"
-        android:textStyle="bold"
-        android:textAllCaps="false"/>
+        android:textSize="18sp"
+        app:cornerRadius="16dp"
+        android:layout_marginBottom="8dp"/>
 
 </LinearLayout>
