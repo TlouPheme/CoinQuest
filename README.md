@@ -37,7 +37,7 @@ CoinQuest is a comprehensive Android application designed to help users take con
 *   **Asynchronous:** Kotlin Coroutines & Flow
 
 ## 🛠 Setup Instructions
-1. Clone the repository: `git clone https://github.com/yourusername/CoinQuest.git`
+1. Clone the repository: `git clone https://github.com/TlouPheme/CoinQuest.git`
 2. Open the project in **Android Studio (Ladybug or newer)**.
 3. Sync Project with Gradle Files.
 4. Run the app on an emulator or physical device (Min SDK 24).
@@ -47,7 +47,7 @@ CoinQuest is a comprehensive Android application designed to help users take con
 *   **CI/CD:** Automated builds and tests via **GitHub Actions** on every push.
 
 ## 📺 Demonstration
-[Link to Video Demonstration]
+https://youtu.be/HVOAty_wM_8
 
 ---
 Developed as a Final POE Project for Android Development.
