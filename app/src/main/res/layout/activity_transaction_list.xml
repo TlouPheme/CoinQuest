@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1F44"
     android:fitsSystemWindows="true">
 
     <RelativeLayout
@@ -19,15 +18,14 @@
             android:src="@drawable/ic_back"
             android:contentDescription="Back"
             android:layout_centerVertical="true"
-            app:tint="#FFD700" />
+            app:tint="@color/gold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/transactions"
-            android:textColor="#FFD700"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            style="@style/TextAppearance.CoinQuest.Headline"
+            android:textSize="@dimen/text_size_title"
             android:layout_centerInParent="true"/>
 
         <ImageButton
@@ -39,7 +37,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_summary"
             android:contentDescription="Summary"
-            app:tint="#FFD700" />
+            app:tint="@color/gold" />
     </RelativeLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -49,14 +47,14 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="16dp"
         app:cardBackgroundColor="#1A2E5A"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="12dp"
         app:strokeColor="#33FFD700"
         app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp"
+            android:padding="16dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -65,17 +63,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Period"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
+                style="@style/TextAppearance.CoinQuest.Body" />
 
             <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginStart="8dp"
                 android:src="@drawable/ic_calendar"
-                app:tint="#FFD700"/>
+                app:tint="@color/gold"
+                android:contentDescription="Select Period"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/search_background"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="12dp"
+        android:hint="Search transactions..."
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="#888888"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:inputType="text" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTransactions"

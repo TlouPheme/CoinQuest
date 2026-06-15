@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="4dp"
+    android:layout_marginVertical="8dp"
     app:cardBackgroundColor="#1A2E5A"
-    app:cardCornerRadius="8dp"
-    app:strokeColor="#33FFD700"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#1AFFFFFF"
     app:strokeWidth="1dp"
     tools:theme="@style/Theme.CoinQuest">
 
@@ -15,24 +16,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:padding="16dp"
+        android:gravity="center_vertical">
 
         <TextView
             android:id="@+id/tvCategoryName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            style="@style/TextAppearance.CoinQuest.Body"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_body"
+            tools:text="Food" />
 
         <TextView
             android:id="@+id/tvCategoryAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FFD700"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textColor="@color/gold"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            tools:text="R150.00" />
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

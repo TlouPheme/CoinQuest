@@ -2,7 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A1F44"
     android:fillViewport="true">
 
     <LinearLayout
@@ -25,7 +24,7 @@
                 android:src="@drawable/ic_back"
                 android:contentDescription="@string/back"
                 android:layout_centerVertical="true"
-                app:tint="#FFD700" />
+                app:tint="@color/gold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,60 +37,61 @@
         <EditText
             android:id="@+id/etTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_marginBottom="16dp"
             android:autofillHints="name"
-            android:backgroundTint="#FFD700"
+            android:backgroundTint="@color/gold"
             android:hint="@string/title_e_g_grocery"
             android:inputType="textCapSentences"
-            android:minHeight="48dp"
-            android:textColor="#FFD700"
+            android:textColor="@color/white"
             android:textColorHint="#888888"
-            android:textSize="18sp" />
+            android:paddingHorizontal="12dp"
+            android:textSize="@dimen/text_size_body" />
 
         <EditText
             android:id="@+id/etAmount"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_marginBottom="16dp"
             android:autofillHints=""
-            android:backgroundTint="#FFD700"
+            android:backgroundTint="@color/gold"
             android:hint="@string/amount"
             android:inputType="numberDecimal"
-            android:minHeight="48dp"
-            android:textColor="#FFD700"
+            android:textColor="@color/white"
             android:textColorHint="#888888"
-            android:textSize="18sp" />
+            android:paddingHorizontal="12dp"
+            android:textSize="@dimen/text_size_body" />
 
         <EditText
             android:id="@+id/etCategory"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_marginBottom="16dp"
             android:autofillHints="none"
-            android:backgroundTint="#FFD700"
+            android:backgroundTint="@color/gold"
             android:hint="@string/category_e_g_food"
             android:inputType="text"
-            android:minHeight="48dp"
-            android:textColor="#FFD700"
+            android:textColor="@color/white"
             android:textColorHint="#888888"
-            android:textSize="18sp" />
+            android:paddingHorizontal="12dp"
+            android:textSize="@dimen/text_size_body" />
 
         <RadioGroup
             android:id="@+id/rgType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
 
             <RadioButton
                 android:id="@+id/rbExpense"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/expense"
-                android:textColor="#FFD700"
+                android:textColor="@color/white"
                 android:checked="true"
-                android:buttonTint="#FFD700"
+                android:buttonTint="@color/gold"
                 android:textStyle="bold"/>
 
             <RadioButton
@@ -99,9 +99,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/income"
-                android:textColor="#FFD700"
-                android:buttonTint="#FFD700"
-                android:layout_marginStart="24dp"
+                android:textColor="@color/white"
+                android:buttonTint="@color/gold"
+                android:layout_marginStart="32dp"
                 android:textStyle="bold"/>
         </RadioGroup>
 
@@ -110,10 +110,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/pick_image"
-            android:backgroundTint="#1A2E5A"
-            android:textColor="#FFD700"
-            android:textStyle="bold"
-            android:textAllCaps="false"
             android:layout_marginBottom="12dp"/>
 
         <ImageView
@@ -129,11 +125,7 @@
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/save_transaction"
-            android:backgroundTint="#FFD700"
-            android:textColor="#0A1F44"
-            android:textStyle="bold"
-            android:textAllCaps="false"/>
+            android:text="@string/save_transaction"/>
 
     </LinearLayout>
 </ScrollView>

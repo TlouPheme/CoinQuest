@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1F44"
     android:padding="16dp">
 
     <TextView
@@ -14,40 +13,48 @@
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"/>
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#1A2E5A"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#1A2E5A"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <EditText
-            android:id="@+id/etGoalName"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Goal Name (e.g. New Car)"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#888888"/>
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <EditText
-            android:id="@+id/etTargetAmount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Target Amount"
-            android:inputType="numberDecimal"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#888888"/>
+            <EditText
+                android:id="@+id/etGoalName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Goal Name (e.g. New Car)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888"
+                android:backgroundTint="@color/gold"/>
 
-        <Button
-            android:id="@+id/btnAddGoal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Savings Goal"
-            android:backgroundTint="#FFD700"
-            android:textColor="#0A1F44"
-            android:layout_marginTop="8dp"/>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/etTargetAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Target Amount"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888"
+                android:backgroundTint="@color/gold"/>
+
+            <Button
+                android:id="@+id/btnAddGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Savings Goal"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSavingsGoals"

@@ -4,12 +4,11 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="#0A1F44"
     android:fitsSystemWindows="true">
 
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/compass_logo"
         android:contentDescription="@string/coinquest_logo"
         android:layout_marginBottom="24dp"/>
@@ -18,42 +17,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_account"
-        android:textColor="#FFD700"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        style="@style/TextAppearance.CoinQuest.Headline"
         android:layout_marginBottom="32dp"/>
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:hint="@string/username"
         android:inputType="text"
         android:textColor="#FFFFFF"
         android:textColorHint="#888888"
-        android:backgroundTint="#FFD700"
+        android:backgroundTint="@color/gold"
         android:autofillHints="username"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="12dp"/>
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
         android:textColorHint="#888888"
-        android:backgroundTint="#FFD700"
+        android:backgroundTint="@color/gold"
         android:autofillHints="password"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="24dp"
+        android:paddingHorizontal="12dp"/>
 
     <Button
         android:id="@+id/btnCreateAccount"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/create_account"
-        android:backgroundTint="#FFD700"
-        android:textColor="#0A1F44"
-        android:textStyle="bold"/>
+        android:layout_height="56dp"
+        android:text="@string/create_account"/>
 
 </LinearLayout>

@@ -6,6 +6,9 @@
         <item name="android:statusBarColor">@color/navy</item>
         <item name="android:windowBackground">@drawable/bg_main_gradient</item>
 
+        <!-- Play Store Quality: Smooth Activity Transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+
         <!-- Default Text Appearances -->
         <item name="textAppearanceHeadlineLarge">@style/TextAppearance.CoinQuest.Headline</item>
         <item name="textAppearanceTitleLarge">@style/TextAppearance.CoinQuest.Title</item>

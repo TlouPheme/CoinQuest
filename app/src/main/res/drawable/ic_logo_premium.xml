@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Outer Ring -->
+    <path
+        android:pathData="M50,5A45,45 0,1 1,50,95A45,45 0,1 1,50,5Z"
+        android:strokeWidth="4"
+        android:strokeColor="#FFD700" />
+    <!-- Inner Coin Circle -->
+    <path
+        android:pathData="M50,15A35,35 0,1 1,50,85A35,35 0,1 1,50,15Z"
+        android:fillColor="#FFD700" />
+    <!-- Stylized 'Q' / Compass Needle -->
+    <path
+        android:pathData="M50,30 L60,50 L50,70 L40,50 Z"
+        android:fillColor="#0A1F44" />
+    <path
+        android:pathData="M50,25 L50,75 M25,50 L75,50"
+        android:strokeWidth="2"
+        android:strokeColor="#0A1F44"
+        android:strokeLineCap="round" />
+    <!-- Shine Detail -->
+    <path
+        android:pathData="M30,30 A25,25 0,0 1,40,20"
+        android:strokeWidth="2"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:alpha="0.6" />
+</vector>

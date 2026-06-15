@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Main Coin Body -->
+    <path
+        android:pathData="M50,50m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
+        android:fillColor="#FFD700"/>
+    <!-- Inner Border -->
+    <path
+        android:pathData="M50,50m-33,0a33,33 0,1 1,66 0a33,33 0,1 1,-66 0"
+        android:strokeWidth="2"
+        android:strokeColor="#0A1F44"/>
+    <!-- Stylized Compass / Diamond 'Q' -->
+    <path
+        android:pathData="M50,25 L65,50 L50,75 L35,50 Z"
+        android:fillColor="#0A1F44"/>
+    <!-- Horizontal Cross Bar -->
+    <path
+        android:pathData="M30,50 L70,50"
+        android:strokeWidth="3"
+        android:strokeColor="#FFD700"/>
+    <!-- Center Dot -->
+    <path
+        android:pathData="M50,50m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"
+        android:fillColor="#FFD700"/>
+</vector>

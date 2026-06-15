@@ -6,10 +6,10 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp"
     app:cardBackgroundColor="#1A2E5A"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="8dp"
-    app:strokeColor="#FFD700"
-    app:strokeWidth="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#1AFFFFFF"
+    app:strokeWidth="1dp"
     tools:theme="@style/Theme.CoinQuest">
 
     <LinearLayout
@@ -20,19 +20,17 @@
         android:gravity="center_vertical">
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            app:cardCornerRadius="28dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardCornerRadius="24dp"
             app:cardBackgroundColor="#0A1F44"
-            app:strokeColor="#FFD700"
-            app:strokeWidth="2dp"
             app:cardElevation="0dp">
 
             <ImageView
                 android:id="@+id/ivTypeIcon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="14dp"
+                android:padding="12dp"
                 android:src="@drawable/ic_income"
                 app:tint="#4CAF50"
                 android:contentDescription="@string/type_icon" />
@@ -49,18 +47,17 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FFD700"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                style="@style/TextAppearance.CoinQuest.Body"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_title" />
 
             <TextView
                 android:id="@+id/tvCategoryDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FFD700"
-                android:textSize="12sp"
-                android:alpha="0.8"
-                android:textStyle="bold" />
+                style="@style/TextAppearance.CoinQuest.Body"
+                android:textSize="@dimen/text_size_small"
+                android:alpha="0.7" />
         </LinearLayout>
 
         <TextView
@@ -68,8 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#4CAF50"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/TextAppearance.CoinQuest.Title" />
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
